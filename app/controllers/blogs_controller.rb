@@ -35,7 +35,7 @@ class BlogsController < ApplicationController
   def destroy
     blog = Blog.find(id_params[:id])
     blog.destroy if blog.user_id == current_user.id
-    redirect_to blogs_path, notice: 'Blogが削除されました'
+    # redirect_to blogs_path, notice: 'Blogが削除されました'
   end
 
   private

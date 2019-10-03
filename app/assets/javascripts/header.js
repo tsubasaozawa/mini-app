@@ -13,12 +13,3 @@ $(function(){
   });
 
 });
-
-
-// $(function(){
-//   $(".edit_id").on("click",function(){
-//     $(".before-form").fadeOut('fast');
-//     $('.blog-form').fadeIn('slow');
-//   });
-
-// });
