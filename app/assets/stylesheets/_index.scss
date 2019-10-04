@@ -2,6 +2,7 @@
   height: 100％;
   width: 100%;
   padding: 90px 230px 0 230px;
+  // overflow: auto;
 }
 
 .content {
@@ -17,8 +18,7 @@
 }
 
 .content__message{
-  // width: 30%;
-
+  margin: 50% 0;
 }
 
 .content__message__InlineEdit-input{
@@ -26,20 +26,27 @@
 }
 
 .content__message__InlineEdit-buttons{
-  float: left;
+  display: flex;
+  flex-direction:row;
 
-  .content__message__InlineEdit-cancel{}
+  .content__message__InlineEdit-cancel{
+    padding:0 5px;
+    cursor: pointer;
+  }
 
-  .content__message__InlineEdit-save{}
+  .content__message__InlineEdit-save{
+    padding:0 5px;
+    cursor: pointer;
+  }
 }
 
 .content__message__box {
-  margin-top: 50px;
+
 }
 
 
 .content__message__info{
-  margin-top: 30px; 
+  margin-top: 20px; 
   color: gray;
   font-size: 10px;
 }

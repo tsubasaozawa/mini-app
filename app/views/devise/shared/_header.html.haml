@@ -14,7 +14,8 @@
 
   .blog-form
     .input-box
-      = form_for [@blog] do |f|
+      = form_for [@blog], html: {class: "new_blog"} do |f|
+        -# form_forを使った非同期化を行う場合、form_forに対して必ず「html: {class: "任意のクラス名"}」を付与する。
         = f.text_area :content, maxlength: 50 ,cols: 29.5, rows: 12, class: 'input-box__text', placeholder: '  入力してください（50文字まで）'
         .input-box__image
           = f.label :image, class: 'input-box__image__file' do

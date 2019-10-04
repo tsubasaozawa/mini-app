@@ -39,7 +39,7 @@ $(function() {
   $(document).on("click", ".edit_id", function () {
     InlineEdit = $(this).parent().siblings(".content__message__box"); // this（.edit_id）親の兄弟であるcontent__message__boxクラスを取得
     values = {
-      id: InlineEdit.attr("data-id"),
+      id: InlineEdit.attr("data-edit-id"),
       content: InlineEdit.find('.lower-message__content').text(),
     }
       var input_element = '<input class="content__message__InlineEdit-input" type="text" value="'+values.content+'">';  // メッセージを入れたまま（'+values.content+'）inputボックス立ち上げ

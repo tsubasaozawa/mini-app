@@ -10,8 +10,12 @@ class BlogsController < ApplicationController
   def create
     @blog = Blog.new(blog_params)
     if @blog.save
-      redirect_to blogs_path, notice: 'Blogが保存されました'
+      respond_to do |format|
+        format.html {redirect_to blogs_path, notice: 'Blogが保存されました'}
+        format.json
+      end
     else
+      # @blog = Blog.find(blog_params)
       flash.now[:alert] = 'メッセージを入力してください。'
       render action: :index
       # 「action: :new」は省略形の「:new」でもOK
@@ -26,7 +30,7 @@ class BlogsController < ApplicationController
     @blog.content = params[:content]
     if @blog.save
       respond_to do |format|
-        format.html  { redirect_to blogs_path, notice: 'Blogが編集されました' }
+        format.html{ redirect_to blogs_path, notice: 'Blogが編集されました' }
         format.json
       end
     end

@@ -13,3 +13,11 @@ $(function(){
   });
 
 });
+
+$(function(){
+  $(".input-box__submit").on("click",function(){
+    $(".blog-form").fadeOut('fast');
+    $('.before-form').fadeIn('slow');
+  });
+
+});

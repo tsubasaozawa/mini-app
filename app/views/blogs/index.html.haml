@@ -1,10 +1,10 @@
 = render partial: 'devise/shared/header'
 .contents
   -@blogs.each do|blog|
-    .content
+    .content{"data-blog-id": "#{blog.id}"}
       .content__messages
         .content__message
-          .content__message__box{"data-id": "#{blog.id}"}
+          .content__message__box{"data-edit-id": "#{blog.id}"}
             -# カスタムデータ属性である"data-id"の値（value）としてeach文で渡された変数（blog.id）を設定
             - if blog.content.present?
               %p.lower-message__content
