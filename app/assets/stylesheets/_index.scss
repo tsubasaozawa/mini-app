@@ -16,13 +16,27 @@
 
 }
 
-.content__message {
+.content__message{
   // width: 30%;
 
 }
+
+.content__message__InlineEdit-input{
+  outline: none;
+}
+
+.content__message__InlineEdit-buttons{
+  float: left;
+
+  .content__message__InlineEdit-cancel{}
+
+  .content__message__InlineEdit-save{}
+}
+
 .content__message__box {
   margin-top: 50px;
 }
+
 
 .content__message__info{
   margin-top: 30px; 
@@ -99,6 +113,7 @@
   margin-right: 3%;
 }
 
+// 以下レスポンシブデザイン
 @media (max-width:768px) {
   .content {
     flex-direction: column;

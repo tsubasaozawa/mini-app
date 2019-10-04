@@ -4,7 +4,7 @@ class BlogsController < ApplicationController
 
   def index
     @blog = Blog.new
-    @blogs = Blog.all.order(created_at: "ASC").limit(10)
+    @blogs = Blog.all.order(created_at: "ASC")
   end
 
   def create

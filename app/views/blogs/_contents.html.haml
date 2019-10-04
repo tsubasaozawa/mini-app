@@ -1,0 +1,24 @@
+-# .content
+-#   .content__messages
+-#     .content__message{"data-id": 'blog.id'}
+-#       .content__message__box
+-#         - if blog.content.present?
+-#           %p.lower-message__content
+-#             = blog.content
+-#       .content__message__info
+-#         %p.message__upper-info__talker
+-#           ユーザ：
+-#           = blog.user.name
+-#         %p.message__upper-info__date
+-#           投稿日時：
+-#           = blog.created_at.strftime("%Y/%m/%d %H:%M")
+      
+-#     .content__message__edit-and-delete-btn
+-#       %p.edit_id
+-#         Edit
+
+-#       =link_to "/blogs/#{blog.id}", method: :delete, class: "delete_id" do
+-#         Delete
+
+-#   .pict
+-#     =image_tag blog.image.url, class: 'pict__img' if blog.image.present?
