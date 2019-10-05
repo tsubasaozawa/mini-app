@@ -37,7 +37,7 @@ $(function() {
   });
 
   $(document).on("click", ".edit_id", function () {
-    InlineEdit = $(this).parent().siblings(".content__message__box"); // this（.edit_id）親の兄弟であるcontent__message__boxクラスを取得
+    InlineEdit = $(this).parent().siblings(".content__message__box"); // 「.parent().siblings(".content__message__box")」で「this（.edit_id）」の親兄弟であるcontent__message__boxクラスを取得
     values = {
       id: InlineEdit.attr("data-edit-id"),
       content: InlineEdit.find('.lower-message__content').text(),

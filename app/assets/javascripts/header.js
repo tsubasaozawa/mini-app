@@ -3,7 +3,6 @@ $(function(){
     $(".before-form").fadeOut('fast');
     $('.blog-form').fadeIn('slow');
   });
-
 });
 
 $(function(){
@@ -11,7 +10,6 @@ $(function(){
     $(".blog-form").fadeOut('fast');
     $('.before-form').fadeIn('slow');
   });
-
 });
 
 $(function(){
@@ -19,5 +17,4 @@ $(function(){
     $(".blog-form").fadeOut('fast');
     $('.before-form').fadeIn('slow');
   });
-
 });

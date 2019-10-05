@@ -18,7 +18,7 @@
 }
 
 .content__message{
-  margin: 50% 0;
+  margin: 75% 0;
 }
 
 .content__message__InlineEdit-input{
@@ -32,11 +32,19 @@
   .content__message__InlineEdit-cancel{
     padding:0 5px;
     cursor: pointer;
+
+    &:hover {
+      color: red;
+    }
   }
 
   .content__message__InlineEdit-save{
     padding:0 5px;
     cursor: pointer;
+
+    &:hover {
+      color: chartreuse;
+    }
   }
 }
 
