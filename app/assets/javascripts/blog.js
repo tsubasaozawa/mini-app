@@ -1,16 +1,12 @@
 $(function(){
   function buildHTML(blog){
-    var html =`<div class="content">
-    <div class="content__messages">
-    <div class="content__message" data-blog-id="${blog.id}">
-    <div class="content__message__box" data-edit-id="${blog.id}">
-    <p class="lower-message__content">${blog.content}</p></div>
-    <div class="content__message__info">
-    <p class="message__upper-info__talker">ユーザ：${blog.name}</p>
-    <p class="message__upper-info__date">投稿日時：${blog.created_at}</p></div>
-    <div class="content__message__edit-and-delete-btn"><p class="edit_id">Edit</p>
-    <a class="delete_id" rel="nofollow" data-method="delete" href="/blogs/13">Delete</a></div></div></div>
-    <div class="pict"><img class="pict__image" src= "${blog.image}" alt="Image"></div></div>`
+    var html =`<div class="content" data-blog-id="${blog.id}">
+                <div class="content__messages">
+                <div class="content__message">
+                <div class="content__message__box" data-edit-id="${blog.id}"><p class="lower-message__content">${blog.content}</p></div>
+                <div class="content__message__info"><p class="message__upper-info__talker">ユーザ：${blog.name}</p><p class="message__upper-info__date">投稿日時：${blog.created_at}</p></div>
+                <div class="content__message__edit-and-delete-btn"><p class="edit_id">Edit</p><p class="delete_id">Delete</p></div></div></div>
+                <div class="pict"><img class="pict__img" src="${blog.image}" alt="Image"></div></div>`
 
     return html;
   }
@@ -38,7 +34,7 @@ $(function(){
       alert("エラー");
     })
     .always(function(data){
-      $('.submit-btn').prop('disabled', false);　
+      $('.input-box__submit').prop('disabled', false);　
     })
   });
 });

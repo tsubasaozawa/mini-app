@@ -1,16 +1,19 @@
 .header
   .header__left
     .header__logo
-      =link_to blogs_path, class: "header__logo" do
+      =link_to blogs_path, class: "header__logo-text" do
         Blog
+    .header__user-name
+      Login user：
+      =current_user.name
+      =link_to edit_user_path(current_user), class: "edit-user" do
+        = fa_icon 'cog', class: 'icon'
+        
   .header__right
-    =link_to edit_user_path(current_user), class: "top-menu1" do
-      Edit User
+    .top-menu1
+      %p Menu
     =link_to destroy_user_session_path, method: :delete, class: "top-menu2" do
-      Signout
-  .header__user-name
-    Login user：
-    =current_user.name
+      %p Signout
 
   .blog-form
     .input-box
@@ -28,3 +31,5 @@
 
   .before-form
     New!
+
+  .main-menu

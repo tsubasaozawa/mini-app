@@ -18,3 +18,9 @@ $(function(){
     $('.before-form').fadeIn('slow');
   });
 });
+
+$(function(){
+  $(".top-menu1").on("click",function(){
+    $('.main-menu').animate({ width: 'toggle'}, 'fast' );
+  });
+});

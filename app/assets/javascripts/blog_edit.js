@@ -27,6 +27,7 @@ $(function() {
         '_method': 'PATCH'} ,
         dataType: 'json'
       })
+      // 非同期でテキストの編集を行う場合には、'_method': 'PATCH'を使用
       .done(function(data) {
         reBuild(data);
       })
